@@ -1,0 +1,104 @@
+-- Kai Hub (Blox Fruits)
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Kai Hub (Blox Fruits) v1.0.0", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+OrionLib:MakeNotification({
+	Name = "Welcome to Kai Hub!",
+	Content = "Join to our discord server: discord.gg/",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+
+local Tab = Window:MakeTab({
+	Name = "Info Hub",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "About Us"
+})
+
+Tab:AddParagraph("Server:","discord.gg/")
+
+local Tab = Window:MakeTab({
+	Name = "Main Farm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Fruit/Raid",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Setting",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Shop",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Esp",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+--PlayerTab
+local PlayerTab = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = PlayerTab:AddSection({
+	Name = "Movement"
+})
+
+PlayerTab:AddSlider({
+	Name = "WalkSpeed",
+	Min = 16,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(Value)
+		game.Workspace.Players.LocalPlayer.Character.Humanoid.Walkspeed = Value
+	end    
+})
+
+PlayerTab:AddSlider({
+	Name = "Jump Height",
+	Min = 16,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "height",
+	Callback = function(Value)
+		game.Workspace.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})

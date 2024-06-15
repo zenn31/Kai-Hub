@@ -38,6 +38,13 @@ local Tab = Window:MakeTab({
 
 
 local Tab = Window:MakeTab({
+	Name = "Race v4",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Tab = Window:MakeTab({
 	Name = "Setting",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
@@ -89,7 +96,6 @@ PlayerTab:AddSlider({
 		game.Workspace.Players.LocalPlayer.Character.Humanoid.Walkspeed = Value
 	end    
 })
-
 PlayerTab:AddSlider({
 	Name = "Jump Height",
 	Min = 16,
